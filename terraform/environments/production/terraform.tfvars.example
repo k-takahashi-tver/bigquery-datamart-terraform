@@ -1,0 +1,13 @@
+
+environment       = "prd"
+project           = "project-prd"
+
+service_account_email = "sample-datamart@project-prd.iam.gserviceaccount.com"
+
+
+import_resources = {
+    "table": [],
+    "view": [],
+    "scheduled_query": [],
+    "tvf": []
+}
