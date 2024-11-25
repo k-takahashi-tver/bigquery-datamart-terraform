@@ -1,2 +1,2 @@
 bucket = "sample-datamart-bucket"
-prefix = "hoge"
+prefix = "sample-datamart"
