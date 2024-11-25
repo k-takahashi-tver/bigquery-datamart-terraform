@@ -2,7 +2,7 @@
 environment       = "dev"
 project           = "project-dev"
 
-service_account_email = "sample-datamart@project-dev.iam.gserviceaccount.com"
+service_account_email = "datamart-creator@project-dev.iam.gserviceaccount.com"
 
 
 import_resources = {

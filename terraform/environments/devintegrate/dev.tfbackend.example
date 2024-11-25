@@ -1,2 +1,2 @@
-bucket = "sample-datamart-bucket"
+bucket = "sample-datamart-bucket-dev"
 prefix = "sample-datamart"
