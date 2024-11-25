@@ -1,0 +1,13 @@
+{
+    "table_id": "sample_mart",
+    "scheduled_display_name": "Append-sample_mart",
+    "schedule": "every day 00:00",
+    "query_path": "query.sql",
+    "table_schema_path": "schema.json",
+    "table_description": "サンプルマート",
+    "time_partitioning": {
+        "field": "created_at",
+        "type": "DAY"
+    },
+    "clustering": ["device_category"]
+}

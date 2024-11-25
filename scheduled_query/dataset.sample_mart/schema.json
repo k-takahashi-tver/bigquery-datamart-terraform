@@ -1,0 +1,17 @@
+[
+    {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "description": "ログ発報時刻"
+    },
+    {
+        "name": "user_id",
+        "type": "STRING",
+        "description": "ユーザー識別ID"
+    },
+    {
+        "name": "device_category",
+        "type": "STRING",
+        "description": "デバイス種別"
+    }
+]
