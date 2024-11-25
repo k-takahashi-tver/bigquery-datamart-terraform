@@ -1,0 +1,3 @@
+.terraform
+*.tfbackend
+*.tfvars
