@@ -1,4 +1,4 @@
-cheduled_query, view など各リソースのディレクトリを想定しています
+# 引数はscheduled_query, view など各リソースのディレクトリを想定しています
 BASE_PATH=$1
 
 # 連想配列を用意します
