@@ -1,0 +1,2 @@
+bucket = "sample-datamart-bucket-stg"
+prefix = "sample-datamart"

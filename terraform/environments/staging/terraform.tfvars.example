@@ -1,0 +1,13 @@
+
+environment       = "stg"
+project           = "project-stg"
+
+service_account_email = "datamart-creator@project-stg.iam.gserviceaccount.com"
+
+
+import_resources = {
+    "table": [],
+    "view": [],
+    "scheduled_query": [],
+    "tvf": []
+}
