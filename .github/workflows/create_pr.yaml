@@ -1,0 +1,33 @@
+# main ブランチへの push をトリガーに各環境にプルリクを作成する
+
+name: Create a pull request for devintegrate/staging/production
+
+on:
+  push:
+    branches: 
+      - main
+    paths: 
+      - terraform/**
+      - scheduled_query/**
+      - table_valued_function/**
+      - user_defined_function/**
+      - view/**
+ 
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create pr devintegrate
+        run: gh pr list --json 'title,headRepository' --jq '.[] | select(.headRepository.name == "bigquery-datamart-terraform") | .title' | grep -q "Deploy to devintegrate" || gh pr create -B "devintegrate" -t "Deploy to devintegrate" -b ""
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create pr staging
+        run: gh pr list --json 'title,headRepository' --jq '.[] | select(.headRepository.name == "bigquery-datamart-terraform") | .title' | grep -q "Deploy to staging" || gh pr create -B "staging" -t "Deploy to staging" -b ""
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create pr production
+        run: gh pr list --json 'title,headRepository' --jq '.[] | select(.headRepository.name == "bigquery-datamart-terraform") | .title' | grep -q "Deploy to production" || gh pr create -B "production" -t "Deploy to production" -b ""
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
